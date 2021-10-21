@@ -71,7 +71,7 @@ class App extends Component {
     {
         // Update sizes
         sizes.width = window.innerWidth
-        sizes.height = window.innerHeight
+        sizes.height = window.innerHeight - 100 
 
         // Update camera
         camera.aspect = sizes.width / sizes.height
