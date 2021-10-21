@@ -8,6 +8,7 @@ import * as dat from 'dat.gui'
 console.log(OrbitControls)
 
 class App extends Component {
+
   componentDidMount() {
 
     const gui = new dat.GUI({ closed: false, width: 400 })
@@ -86,12 +87,12 @@ class App extends Component {
     camera.position.z = 3
 
     // Render
-    const renderer = new THREE.WebGLRenderer();
-    const canvas = renderer.domElement
-    renderer.setSize( sizes.width, sizes.height );
-    document.body.appendChild( canvas );
+    const renderer = new THREE.WebGLRenderer(); // draw
+    const canvas = renderer.domElement // create a canvas 
+    renderer.setSize( sizes.width, sizes.height); // size of canvas 
+    document.body.appendChild( canvas ); // add canvas to <body>
 
-    const controls = new OrbitControls(camera, renderer.domElement)
+    const controls = new OrbitControls(camera, canvas)
     controls.enableDamping = true
 
     // Animate 
